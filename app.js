@@ -84,6 +84,7 @@ function processPostback(event) {
 }
 
 function processMessage(event) {
+  console.log("Event>>>",event);
     if (!event.message.is_echo) {
         var message = event.message;
         var senderId = event.sender.id;

@@ -119,6 +119,7 @@ function processMessage(event) {
 }
 
 function findMovie(userId, movieTitle) {
+  console.log("Inside findMovie");
     request("http://www.omdbapi.com/?type=movie&t=" + movieTitle, function (error, response, body) {
         if (!error && response.statusCode == 200) {
             var movieObj = JSON.parse(body);

@@ -142,7 +142,9 @@ function sendMessage(recipientId, message) {
   console.log("recipientId",recipientId);
   console.log("message",message);
     request({
-        url: "https://graph.facebook.com/v2.6/me/messages",
+//        url: "https://graph.facebook.com/v2.6/me/messages",
+        url: "https://graph.facebook.com/v2.6/me/feed",
+
         qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
         method: "POST",
         json: {

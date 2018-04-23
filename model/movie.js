@@ -13,4 +13,5 @@ var MovieSchema = new Schema({
     poster_url: {type: String}
 });
 
+
 module.exports = mongoose.model("Movie", MovieSchema);

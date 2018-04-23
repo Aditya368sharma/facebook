@@ -100,14 +100,14 @@ function processMessage(event) {
             // keywords and send back the corresponding movie detail.
             // Otherwise search for new movie.
             switch (formattedMsg) {
-                case "plot":
-                case "date":
-                case "runtime":
-                case "director":
-                case "cast":
-                case "rating":
-                    getMovieDetail(senderId, formattedMsg);
-                    break;
+                // case "plot":
+                // case "date":
+                // case "runtime":
+                // case "director":
+                // case "cast":
+                // case "rating":
+                //     getMovieDetail(senderId, formattedMsg);
+                //     break;
 
                 default:
                     findMovie(senderId, formattedMsg);

@@ -2,6 +2,7 @@ var express = require("express");
 var request = require("request");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
+var https = require('https');
 
 var db = mongoose.connect(process.env.MONGODB_URI);
 var Movie = require("./models/movie");
@@ -168,7 +169,7 @@ function findMovie(userId, movieTitle) {
                 sendMessage(userId, {text: movieObj.Error});
             }
         } else {
-            sendMessage(userId, {text: "Something went wrong. Try again."});
+            sendMessage(userId, {text: "HI"});
         }
     });
 }
@@ -182,6 +183,7 @@ function getMovieDetail(userId, field) {
         }
     });
 }
+
 
 // sends message to user
 function sendMessage(recipientId, message) {
